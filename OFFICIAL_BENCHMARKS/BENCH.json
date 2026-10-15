@@ -1,0 +1,574 @@
+{
+  "schema": "anticloud.tier-bench/1",
+  "project": "POLIASTRO",
+  "source": {
+    "repo_path": "E:\\fenta\\Downloads\\The Anticloud\\ANTICLOUD_REPOS\\SPACE_AEROTECH\\POLIASTRO\\UPSTREAM_CLONE",
+    "git": {
+      "head": "21fd7719e89a7d22b4eac63141a60a7f1b01768c",
+      "url": "https://github.com/poliastro/poliastro",
+      "branch": "main",
+      "committed_at": "2023-10-14T17:30:47+02:00"
+    }
+  },
+  "metrics": {
+    "files_total": 320,
+    "source_files_scanned": 184,
+    "lines_of_code": 31842,
+    "languages": {
+      ".py": 189,
+      ".png": 52,
+      ".md": 40,
+      ".html": 11,
+      "(none)": 8,
+      ".dat": 4,
+      ".yaml": 2,
+      ".json": 2,
+      ".svg": 2,
+      ".cff": 1,
+      ".ipynb": 1,
+      ".in": 1,
+      ".toml": 1,
+      ".ini": 1,
+      ".gif": 1
+    }
+  },
+  "licence": {
+    "spdx": "MIT",
+    "class": "A",
+    "source_file": "COPYING",
+    "redistribution_allowed": true
+  },
+  "dependencies": {
+    "count": 8,
+    "unique": 8,
+    "by_ecosystem": {
+      "conda": 2,
+      "pypi": 6
+    },
+    "list": [
+      {
+        "ecosystem": "pypi",
+        "name": "astropy",
+        "version": ">=5.0",
+        "source_file": "pyproject.toml",
+        "raw": "astropy >=5.0"
+      },
+      {
+        "ecosystem": "pypi",
+        "name": "astroquery",
+        "version": ">=0.3.9",
+        "source_file": "pyproject.toml",
+        "raw": "astroquery >=0.3.9"
+      },
+      {
+        "ecosystem": "pypi",
+        "name": "jplephem",
+        "version": "",
+        "source_file": "pyproject.toml",
+        "raw": "jplephem"
+      },
+      {
+        "ecosystem": "pypi",
+        "name": "matplotlib",
+        "version": ">=2.0",
+        "source_file": "pyproject.toml",
+        "raw": "matplotlib >=2.0"
+      },
+      {
+        "ecosystem": "pypi",
+        "name": "numba",
+        "version": ">=0.46",
+        "source_file": "pyproject.toml",
+        "raw": "numba >=0.46"
+      },
+      {
+        "ecosystem": "pypi",
+        "name": "3.9",
+        "version": "",
+        "source_file": "pyproject.toml",
+        "raw": "3.9"
+      },
+      {
+        "ecosystem": "conda",
+        "name": "python",
+        "version": "3.10",
+        "source_file": "binder/environment.yml",
+        "raw": "- python=3.10"
+      },
+      {
+        "ecosystem": "conda",
+        "name": "jupytext",
+        "version": "",
+        "source_file": "binder/environment.yml",
+        "raw": "- jupytext"
+      }
+    ]
+  },
+  "owasp_top10": {
+    "total_findings": 46,
+    "files_with_findings": 40,
+    "severity": {
+      "high": 2,
+      "medium": 0,
+      "low": 44
+    },
+    "categories": {
+      "A01-BrokenAccessControl": {
+        "count": 0,
+        "findings": []
+      },
+      "A02-CryptographicFailures": {
+        "count": 0,
+        "findings": []
+      },
+      "A03-Injection": {
+        "count": 2,
+        "findings": [
+          {
+            "severity": "high",
+            "file": "tests/test_bodies.py",
+            "line": 92,
+            "cwe": "CWE-502",
+            "snippet": "iss_pickle = pickle.load(fh)"
+          },
+          {
+            "severity": "high",
+            "file": "tests/tests_twobody/test_orbit.py",
+            "line": 466,
+            "cwe": "CWE-502",
+            "snippet": "orb_result = pickle.loads(pickled)"
+          }
+        ]
+      },
+      "A04-InsecureDesign": {
+        "count": 33,
+        "findings": [
+          {
+            "severity": "low",
+            "file": "tests/test_czml.py",
+            "line": 7,
+            "cwe": "CWE-",
+            "snippet": "# TODO: Should we have way to handle this configuration without importing numba?"
+          },
+          {
+            "severity": "low",
+            "file": "tests/test_ephem.py",
+            "line": 153,
+            "cwe": "CWE-",
+            "snippet": "# TODO: Should it return exactly the same?"
+          },
+          {
+            "severity": "low",
+            "file": "tests/test_spheroid_location.py",
+            "line": 105,
+            "cwe": "CWE-",
+            "snippet": "# TODO: Find ways to improve error margin"
+          },
+          {
+            "severity": "low",
+            "file": "tests/tests_twobody/test_orbit.py",
+            "line": 1256,
+            "cwe": "CWE-",
+            "snippet": "# FIXME: Add test that verifies that `orbit.nu` is always within range"
+          },
+          {
+            "severity": "low",
+            "file": "tests/tests_twobody/test_perturbations.py",
+            "line": 376,
+            "cwe": "CWE-",
+            "snippet": "# TODO: Where does this data come from?"
+          },
+          {
+            "severity": "low",
+            "file": "tests/tests_twobody/test_propagation.py",
+            "line": 94,
+            "cwe": "CWE-",
+            "snippet": "# TODO: Extend to other propagators?"
+          },
+          {
+            "severity": "low",
+            "file": "tests/tests_twobody/test_sampling.py",
+            "line": 80,
+            "cwe": "CWE-",
+            "snippet": "# FIXME: In some corner cases the resulting anomaly goes out of range"
+          },
+          {
+            "severity": "low",
+            "file": "tests/tests_plotting/test_orbit_plotter.py",
+            "line": 230,
+            "cwe": "CWE-",
+            "snippet": "# TODO: Review"
+          },
+          {
+            "severity": "low",
+            "file": "src/poliastro/bodies.py",
+            "line": 42,
+            "cwe": "CWE-",
+            "snippet": "# HACK: Constants cannot be hashed"
+          },
+          {
+            "severity": "low",
+            "file": "src/poliastro/_math/special.py",
+            "line": 11,
+            "cwe": "CWE-",
+            "snippet": ".. todo::"
+          },
+          {
+            "severity": "low",
+            "file": "src/poliastro/twobody/elements.py",
+            "line": 59,
+            "cwe": "CWE-",
+            "snippet": "# TODO: Make this a propagator method"
+          },
+          {
+            "severity": "low",
+            "file": "src/poliastro/twobody/sampling.py",
+            "line": 87,
+            "cwe": "CWE-",
+            "snippet": "# TODO: Make state public?"
+          },
+          {
+            "severity": "low",
+            "file": "src/poliastro/twobody/propagation/cowell.py",
+            "line": 67,
+            "cwe": "CWE-",
+            "snippet": "# TODO: This should probably return a RVStateArray instead,"
+          },
+          {
+            "severity": "low",
+            "file": "src/poliastro/twobody/propagation/farnocchia.py",
+            "line": 57,
+            "cwe": "CWE-",
+            "snippet": "# TODO: This should probably return a ClassicalStateArray instead,"
+          },
+          {
+            "severity": "low",
+            "file": "src/poliastro/twobody/orbit/creation.py",
+            "line": 27,
+            "cwe": "CWE-",
+            "snippet": "def __init__(self, *_, **__):  # HACK stub to make mypy happy"
+          },
+          {
+            "severity": "low",
+            "file": "src/poliastro/twobody/orbit/scalar.py",
+            "line": 324,
+            "cwe": "CWE-",
+            "snippet": "# TODO: Perhaps this should be public API as well?"
+          },
+          {
+            "severity": "low",
+            "file": "src/poliastro/plotting/tisserand.py",
+            "line": 149,
+            "cwe": "CWE-",
+            "snippet": "# HACK: to reuse Tisserand solver, we transform input Vinf into a tuple"
+          },
+          {
+            "severity": "low",
+            "file": "src/poliastro/plotting/orbit/plotter.py",
+            "line": 189,
+            "cwe": "CWE-",
+            "snippet": "# HACK: avoid circular dependency with ``Body.plot()``"
+          },
+          {
+            "severity": "low",
+            "file": "src/poliastro/plotting/orbit/backends/matplotlib.py",
+            "line": 72,
+            "cwe": "CWE-",
+            "snippet": "# HACK: https://stackoverflow.com/a/13831816/554319"
+          },
+          {
+            "severity": "low",
+            "file": "src/poliastro/plotting/orbit/backends/plotly.py",
+            "line": 324,
+            "cwe": "CWE-",
+            "snippet": "# HACK: plotly does not show LaTeX symbols and \\text. The usage of"
+          },
+          {
+            "severity": "low",
+            "file": "src/poliastro/frames/ecliptic.py",
+            "line": 30,
+            "cwe": "CWE-",
+            "snippet": "# HACK: sphinx-autoapi variable definition"
+          },
+          {
+            "severity": "low",
+            "file": "src/poliastro/frames/equatorial.py",
+            "line": 43,
+            "cwe": "CWE-",
+            "snippet": "# HACK: sphinx-autoapi variable definition"
+          },
+          {
+            "severity": "low",
+            "file": "src/poliastro/frames/fixed.py",
+            "line": 59,
+            "cwe": "CWE-",
+            "snippet": "# HACK: sphinx-autoapi variable definition"
+          },
+          {
+            "severity": "low",
+            "file": "src/poliastro/earth/__init__.py",
+            "line": 99,
+            "cwe": "CWE-",
+            "snippet": "# TODO: This whole function probably needs a refactoring"
+          },
+          {
+            "severity": "low",
+            "file": "src/poliastro/earth/atmosphere/coesa76.py",
+            "line": 160,
+            "cwe": "CWE-",
+            "snippet": "# TODO: Apply air mean molecular weight ratio factor"
+          }
+        ]
+      },
+      "A05-SecurityMisconfiguration": {
+        "count": 0,
+        "findings": []
+      },
+      "A06-VulnerableComponents": {
+        "count": 0,
+        "findings": []
+      },
+      "A07-AuthFailures": {
+        "count": 0,
+        "findings": []
+      },
+      "A08-SoftwareDataIntegrity": {
+        "count": 11,
+        "findings": [
+          {
+            "severity": "low",
+            "file": "tests/tests_twobody/test_perturbations.py",
+            "line": 213,
+            "cwe": "CWE-319",
+            "snippet": "# http://farside.ph.utexas.edu/teaching/celestial/Celestialhtml/node94.html#sair (10.148)"
+          },
+          {
+            "severity": "low",
+            "file": "src/poliastro/twobody/propagation/farnocchia.py",
+            "line": 25,
+            "cwe": "CWE-319",
+            "snippet": "The logic is based on formulae (4), (6) and (7) from http://dx.doi.org/10.1007/s10569-013-9476-9"
+          },
+          {
+            "severity": "low",
+            "file": "src/poliastro/twobody/propagation/pimienta.py",
+            "line": 23,
+            "cwe": "CWE-319",
+            "snippet": "evaluations*. Original paper is on Buffalo's UBIR repository: http://hdl.handle.net/10477/50522"
+          },
+          {
+            "severity": "low",
+            "file": "src/poliastro/twobody/propagation/recseries.py",
+            "line": 24,
+            "cwe": "CWE-319",
+            "snippet": "with DOI: http://dx.doi.org/10.13140/RG.2.2.18578.58563/1"
+          },
+          {
+            "severity": "low",
+            "file": "src/poliastro/earth/atmosphere/coesa76.py",
+            "line": 222,
+            "cwe": "CWE-319",
+            "snippet": "# directly taken from: http://www.braeunig.us/space/atmmodel.htm"
+          },
+          {
+            "severity": "low",
+            "file": "src/poliastro/core/propagation/farnocchia.py",
+            "line": 332,
+            "cwe": "CWE-319",
+            "snippet": "The logic is based on formulae (4), (6) and (7) from http://dx.doi.org/10.1007/s10569-013-9476-9"
+          },
+          {
+            "severity": "low",
+            "file": "src/poliastro/core/propagation/markley.py",
+            "line": 92,
+            "cwe": "CWE-319",
+            "snippet": "The following algorithm was taken from http://dx.doi.org/10.1007/BF00691917."
+          },
+          {
+            "severity": "low",
+            "file": "src/poliastro/core/propagation/recseries.py",
+            "line": 114,
+            "cwe": "CWE-319",
+            "snippet": "with DOI: http://dx.doi.org/10.13140/RG.2.2.18578.58563/1"
+          },
+          {
+            "severity": "low",
+            "file": "src/poliastro/constants/general.py",
+            "line": 19,
+            "cwe": "CWE-319",
+            "snippet": ".. _`DOI: 10.1007/s10569-011-9352-4`: http://dx.doi.org/10.1007/s10569-011-9352-4"
+          },
+          {
+            "severity": "low",
+            "file": "docs/source/conf.py",
+            "line": 143,
+            "cwe": "CWE-319",
+            "snippet": "\"http://chat.poliastro.space\","
+          },
+          {
+            "severity": "low",
+            "file": "contrib/rv2tle.py",
+            "line": 6,
+            "cwe": "CWE-319",
+            "snippet": "Original C++ implementation available in http://sat.belastro.net/satelliteorbitdetermination.com/."
+          }
+        ]
+      },
+      "A09-LoggingMonitoringFailures": {
+        "count": 0,
+        "findings": []
+      },
+      "A10-SSRF": {
+        "count": 0,
+        "findings": []
+      }
+    }
+  },
+  "owasp_llm_top10": {
+    "total_findings": 0,
+    "files_with_findings": 0,
+    "severity": {
+      "high": 0,
+      "medium": 0,
+      "low": 0
+    },
+    "categories": {
+      "LLM01-PromptInjection": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM02-SensitiveInfoDisclosure": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM03-SupplyChain": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM04-DataPoisoning": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM05-ImproperOutputHandling": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM06-ExcessiveAgency": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM07-SystemPromptLeak": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM08-VectorEmbeddingWeaknesses": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM09-Misinformation": {
+        "count": 0,
+        "findings": []
+      },
+      "LLM10-UnboundedConsumption": {
+        "count": 0,
+        "findings": []
+      }
+    }
+  },
+  "sbom": {
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.5",
+    "serialNumber": "urn:uuid:632516a9-85c2-55f5-b98e-d593b5a859e2",
+    "version": 1,
+    "metadata": {
+      "timestamp": "2026-10-06T06:41:38Z",
+      "component": {
+        "type": "application",
+        "name": "POLIASTRO",
+        "version": "21fd7719e89a",
+        "bom-ref": "pkg:generic/anticloud/POLIASTRO@21fd7719e89a",
+        "purl": "pkg:generic/anticloud/POLIASTRO@21fd7719e89a",
+        "licenses": [
+          {
+            "license": {
+              "id": "MIT"
+            }
+          }
+        ]
+      },
+      "properties": [
+        {
+          "name": "anticloud:source-commit",
+          "value": "21fd7719e89a7d22b4eac63141a60a7f1b01768c"
+        },
+        {
+          "name": "anticloud:source-url",
+          "value": "https://github.com/poliastro/poliastro"
+        },
+        {
+          "name": "anticloud:tier",
+          "value": "tier-agent"
+        }
+      ]
+    },
+    "components": [
+      {
+        "type": "library",
+        "name": "astropy",
+        "version": ">=5.0",
+        "purl": "pkg:pypi/astropy@5.0",
+        "bom-ref": "pypi/astropy@>=5.0"
+      },
+      {
+        "type": "library",
+        "name": "astroquery",
+        "version": ">=0.3.9",
+        "purl": "pkg:pypi/astroquery@0.3.9",
+        "bom-ref": "pypi/astroquery@>=0.3.9"
+      },
+      {
+        "type": "library",
+        "name": "jplephem",
+        "version": "unspecified",
+        "purl": "pkg:pypi/jplephem",
+        "bom-ref": "pypi/jplephem@unspecified"
+      },
+      {
+        "type": "library",
+        "name": "matplotlib",
+        "version": ">=2.0",
+        "purl": "pkg:pypi/matplotlib@2.0",
+        "bom-ref": "pypi/matplotlib@>=2.0"
+      },
+      {
+        "type": "library",
+        "name": "numba",
+        "version": ">=0.46",
+        "purl": "pkg:pypi/numba@0.46",
+        "bom-ref": "pypi/numba@>=0.46"
+      },
+      {
+        "type": "library",
+        "name": "3.9",
+        "version": "unspecified",
+        "purl": "pkg:pypi/3.9",
+        "bom-ref": "pypi/3.9@unspecified"
+      },
+      {
+        "type": "library",
+        "name": "python",
+        "version": "3.10",
+        "purl": "pkg:generic/python@3.10",
+        "bom-ref": "conda/python@3.10"
+      },
+      {
+        "type": "library",
+        "name": "jupytext",
+        "version": "unspecified",
+        "purl": "pkg:generic/jupytext",
+        "bom-ref": "conda/jupytext@unspecified"
+      }
+    ]
+  },
+  "elapsed_seconds": 40.51
+}

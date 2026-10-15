@@ -1,0 +1,47 @@
+# SLSA v1.0 Build Level 3
+
+**Project:** POLIASTRO · **Category:** SPACE_AEROTECH · **Vendor:** Anticloud FZ LLE
+
+## Model component (PAX L5 Narrow L2 General 27B — quoted with provenance)
+
+| Module | Key Metric | Value |
+|--------|-----------|-------|
+| CRDT | lww_set_us | 0.51 |
+| CRDT | merge_10k_ms | 0.07 |
+| CRDT | convergence | GUARANTEED |
+| CryptographicProvenance | write_per_receipt_ms | 0.059 |
+| CryptographicProvenance | verify_1k_chain_ms | 2.53 |
+| ZeroTrustLocalMesh | ca_gen_ms | 367.5 |
+| ZeroTrustLocalMesh | cert_issue_ms | 333.8 |
+| ZeroTrustLocalMesh | tls_version | 1.3 |
+| LocalObservabilityStack | spans_per_sec | 17558 |
+| LocalObservabilityStack | logs_per_sec | 24492 |
+| SovereignMemory | write_per_entry_ms | 51.94 |
+| SovereignMemory | encryption | AES-256-GCM |
+| AIOSS_AuditChain | entries_per_sec | 232665 |
+| AIOSS_AuditChain | hash_algo | SHA3-256 |
+
+*Run ID loiskleinner/pax-benchmark-runner v3, 2026-10-02, Kaggle T4 x2 (2x 16GB VRAM), Ubuntu 22.04, Python 3.12. These are PAX L5 Narrow L2 General 27B model-level results — shared model component, not this project's verdict.*
+
+## Project-level basis (this project's own measured checks)
+
+| Basis check | Status | Observed |
+|---|---|---|
+| 05_git_health | PASS | head=dcfac01c632c80282f2c36f3169fa2a525c38673 commits=1 clea |
+| 04_sbom_cyclonedx | PASS | CycloneDX 1.5 components=272 |
+
+## Verdict
+
+CONTROLS EVIDENCED — all basis checks PASS
+
+Verdict derives only from the basis checks above (actual runs, register recorded). Nothing here is copied from another project's assessment.
+
+## Cryptographic integrity
+
+- BENCH.json sha3-256: `46f4bb438ae63d093b1bb719be903bffd02214b52524c095c6f3baf8787c72d5`
+- Result register sha3-256: `c14b4f0de440f7653a2318b0af561dfe342ca8e985f4e46a85e458eca98161b2`
+- Generated: 2026-10-06T18:12:52Z
+
+*Anticloud FZ LLE · AIOSS Ledger Genesis: 8b4a8a4f6312dfbe885de8280716985637c163fd2a4b5590341d56db1cc4e560*
+
+> Self-assessment only. No external audit has been performed. A SOC 2 / NIST independent audit is committed post-funding.

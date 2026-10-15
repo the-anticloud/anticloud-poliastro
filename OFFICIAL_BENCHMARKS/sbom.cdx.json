@@ -1,0 +1,95 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.5",
+  "serialNumber": "urn:uuid:632516a9-85c2-55f5-b98e-d593b5a859e2",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-10-06T06:41:38Z",
+    "component": {
+      "type": "application",
+      "name": "POLIASTRO",
+      "version": "21fd7719e89a",
+      "bom-ref": "pkg:generic/anticloud/POLIASTRO@21fd7719e89a",
+      "purl": "pkg:generic/anticloud/POLIASTRO@21fd7719e89a",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    "properties": [
+      {
+        "name": "anticloud:source-commit",
+        "value": "21fd7719e89a7d22b4eac63141a60a7f1b01768c"
+      },
+      {
+        "name": "anticloud:source-url",
+        "value": "https://github.com/poliastro/poliastro"
+      },
+      {
+        "name": "anticloud:tier",
+        "value": "tier-agent"
+      }
+    ]
+  },
+  "components": [
+    {
+      "type": "library",
+      "name": "astropy",
+      "version": ">=5.0",
+      "purl": "pkg:pypi/astropy@5.0",
+      "bom-ref": "pypi/astropy@>=5.0"
+    },
+    {
+      "type": "library",
+      "name": "astroquery",
+      "version": ">=0.3.9",
+      "purl": "pkg:pypi/astroquery@0.3.9",
+      "bom-ref": "pypi/astroquery@>=0.3.9"
+    },
+    {
+      "type": "library",
+      "name": "jplephem",
+      "version": "unspecified",
+      "purl": "pkg:pypi/jplephem",
+      "bom-ref": "pypi/jplephem@unspecified"
+    },
+    {
+      "type": "library",
+      "name": "matplotlib",
+      "version": ">=2.0",
+      "purl": "pkg:pypi/matplotlib@2.0",
+      "bom-ref": "pypi/matplotlib@>=2.0"
+    },
+    {
+      "type": "library",
+      "name": "numba",
+      "version": ">=0.46",
+      "purl": "pkg:pypi/numba@0.46",
+      "bom-ref": "pypi/numba@>=0.46"
+    },
+    {
+      "type": "library",
+      "name": "3.9",
+      "version": "unspecified",
+      "purl": "pkg:pypi/3.9",
+      "bom-ref": "pypi/3.9@unspecified"
+    },
+    {
+      "type": "library",
+      "name": "python",
+      "version": "3.10",
+      "purl": "pkg:generic/python@3.10",
+      "bom-ref": "conda/python@3.10"
+    },
+    {
+      "type": "library",
+      "name": "jupytext",
+      "version": "unspecified",
+      "purl": "pkg:generic/jupytext",
+      "bom-ref": "conda/jupytext@unspecified"
+    }
+  ]
+}
