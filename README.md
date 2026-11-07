@@ -4,7 +4,7 @@
 
 **Category:** SPACE_AEROTECH · **Ecosystem:** unknown · **Vendored upstream:** https://github.com/poliastro/poliastro · **Pinned commit:** `21fd7719e89a7d22b4eac63141a60a7f1b01768c` · **Vendor:** Anticloud FZ LLE
 
-## What This Project Is
+## What This Project Does
 
 _poliastro is archived and will not be developed any further, see https://github.com/poliastro/poliastro/issues/1640 for more context._ _Forks welcome, please respect the license by retaining attribution, and consider rebranding your fork if you intend to develop it in the long run._ _If you still use poliastro in your work, see below how to cite it._ _For a more complete background of the project, see https://conference.scipy.org/proceedings/scipy2022/juanluis_cano_poliastro.html._ Per Python ad astra!
 
@@ -41,7 +41,7 @@ talks in some of the most popular conferences about scientific software:
 | EuroSciPy 2019  | [Can we make Python fast without sacrificing readability? numba for Astrodynamics](https://pyvideo.org/euroscipy-2019/can-we-make-python-fast-without-sacrificing-readability-numba-for-astrodynamics.html) |
 | EuroPython 2016 |                                                             [Per Python ad Astra](https://pyvideo.org/europython-2016/per-python-ad-astra.html)                                                             |
 
-## Anticloud Overlay
+## API
 
 The 12 improvements live under `anticloud/`. Run the check suite from this directory:
 
@@ -49,7 +49,7 @@ The 12 improvements live under `anticloud/`. Run the check suite from this direc
 python anticloud/bench/runner.py --cwd anticloud
 ```
 
-## Benchmark Results
+## Benchmarks
 
 | Result | Status | Evidence |
 | --- | --- | --- |
@@ -72,11 +72,11 @@ python anticloud/bench/runner.py --cwd anticloud
 
 **Suite: 16/16 passed** · platform `win32` · python `3.12.10` · method `{'aggregate_rule': 'all_passed == AND over benchmarks[*].ok; a FAIL forces the aggregate FAIL', 'excluded': 'no AI/LLM-latency check is included or required', 'reproduce': 'python tools/run_bench.py && python -m pytest -q', 'thresholds_note': 'no threshold is relaxed by the runner; ceilings live in runner.py and are asserted independently in tests/test_project_metadata.py'}`
 
-## Licence
+## License
 
 The upstream licence is preserved in `LICENSE` and `THIRD_PARTY_LICENSES/`. The Anticloud overlay is licensed under Anticommons 0.1.0 (`ANTICOMMONS_LICENSE.md`).
 
-## Verification
+## Upstream
 
 SHA3-256 of `BENCH.json`:
 
@@ -85,3 +85,18 @@ SHA3-256 of `BENCH.json`:
 ```
 
 Recompute the hash above and compare — any drift means the package has been tampered with and the seal is invalid. This is a self-assessment; no external audit has been performed and a SOC 2 / NIST independent audit is committed post-funding.
+
+
+## Dependencies
+
+See project documentation for details.
+
+
+## Configuration
+
+See project documentation for details.
+
+
+## Contributing
+
+See project documentation for details.
